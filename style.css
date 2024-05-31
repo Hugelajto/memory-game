@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-color: #e7c6ff;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: 15em;
+ gap: 10em;
+}
+
+
+.card-container {
+  width: 640px;
+  height: 600px;
+  margin: auto;
+  margin-top: 15vh;
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  grid-template-rows: repeat(4, 160px); 
+  align-content: center;
+  justify-content: center;
+  /* overflow: hidden; */
+  position: relative;
+  transform-style: preserve-3d;
+
+
+}
+
+  .front, .back {
+  position: absolute;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0,0,0,.3);
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  
+}
+
+.front{
+  background-image: url(./assets/v661-tk-17-watercolorpattern.jpg);
+  background-size: cover;
+  height: 150px;
+  width: 110px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.back {
+  height: 148px;
+  background-color: #bde0fe;
+ } 
+
+ .rotate {
+  transform: rotateY(180deg);
+ }
+
+ .restart-btn,
+ .update-name-btn {
+  padding: 1em;
+  border-radius: 1em;
+  width: 150px;
+  margin: 0 0 6em 9em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #bde0fe;
+  color: #0c72d1;
+  font-weight: bolder;
+  border-color: #e7c6ff;
+ }
+
+ .restart-btn {
+  padding: 2em 4em 2em 4em;
+ }
+
+.selected-player{
+  padding: 1em;
+  border: solid 2px #a366cf;
+  -webkit-text-stroke-width: .8px;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0.856);
+}
+
+.none{
+  display: none;
+}
+
+.winner-container{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: red;
+  z-index: 1000000;
+}
+
+.playerScore{
+  display: flex;
+  gap: 3em;
+  h2 {
+    color: #0c72d1;
+    font-size: 4em;
+  }
+  p {
+    color: rgb(182, 78, 241);
+    font-size: .7em;
+  }
+}
+
+.player-one,
+.player-two {
+  margin: 1em;
+  height: 3em;
+  border-radius: 1em;
+}
+
+.winner-container{
+  background-color: #e7c6ff;
+  opacity: 75%;
+}
+
+.winner-name{
+  font-size: 5em;
+}
