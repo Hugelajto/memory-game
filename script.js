@@ -86,9 +86,9 @@ const checkWinner = () => {
     setTimeout(()=>{
       winnerContainer.style.display = 'flex'
       if(playerOne.score > playerTwo.score){
-        winnerName.innerText = `Congratulations! ${playerOne.name}`
+        winnerName.innerText = `Congratulations! + ${playerOne.name}`
       } else if (playerOne.score < playerTwo.score) {
-        winnerName.innerText = `Congratulations! ${playerTwo.name}`
+        winnerName.innerText = `Congratulations! + ${playerTwo.name}`
       } else {
         winnerName.innerText = `It's a tie!`
       }
