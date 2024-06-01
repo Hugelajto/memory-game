@@ -85,10 +85,12 @@ const checkWinner = () => {
   if(matchedCards.length === cards.length){
     setTimeout(()=>{
       winnerContainer.style.display = 'flex'
-      if(playerOne.score > playerTwo){
+      if(playerOne.score > playerTwo.score){
         winnerName.innerText = `Congratulations! ${playerOne.name}`
-      }else{
+      }if else {
         winnerName.innerText = `Congratulations! ${playerTwo.name}`
+      } else {
+        winnerName.innerText = `It's a tie!`
       }
       let count = 6
       const timer = setInterval(()=> {
