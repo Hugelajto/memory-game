@@ -87,7 +87,7 @@ const checkWinner = () => {
       winnerContainer.style.display = 'flex'
       if(playerOne.score > playerTwo.score){
         winnerName.innerText = `Congratulations! ${playerOne.name}`
-      }if else {
+      } else if (playerOne.score < playerTwo.score) {
         winnerName.innerText = `Congratulations! ${playerTwo.name}`
       } else {
         winnerName.innerText = `It's a tie!`
